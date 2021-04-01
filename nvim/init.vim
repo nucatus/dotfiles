@@ -17,6 +17,7 @@ let mapleader = ","
 " edit and save the vimrc file.
 nnoremap <leader>ev :vsplit $MYVIMRC<cr>
 nnoremap <leader>sv :source $MYVIMRC<cr>
+imap jk <Esc>
 
 set number
 set relativenumber

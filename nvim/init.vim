@@ -22,8 +22,7 @@ imap jk <Esc>
 set number
 set relativenumber
 set tw=80
-
-autocmd FileType yaml,yml,vim,py setlocal ts=2 sts=2 sw=2 expandtab
+set expandtab tabstop=2 shiftwidth=2 softtabstop=2
 
 " -Plugin configurations
 " --Gruvebox configuration

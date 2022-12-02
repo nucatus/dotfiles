@@ -9,7 +9,7 @@ if [ -f $HOME/.config/fish/private.fish ]
 end
 
 # Editor
-set -x EDITOR vim
+set -x EDITOR nvim
 set -x GIT_EDITOR $EDITOR
 set -x SUDO_EDITOR "rvim -u NONE"
 

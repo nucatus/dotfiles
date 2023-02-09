@@ -1,0 +1,5 @@
+require('base')
+require('style')
+require('keymaps')
+require('clipboard')
+require('plugins')

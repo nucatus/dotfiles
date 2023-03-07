@@ -4,7 +4,7 @@ vim.keymap.set('n', '<leader><leader>', builtin.find_files, {})
 -- use the live_grep_args instead of the live_grep. This is 
 -- a plugin that falls back to ripgrep and allows more filters
 -- vim.keymap.set('n', '<leader>ps', builtin.live_grep, {})
-vim.keymap.set('n', '<leader>fs', require("telescope").extensions.live_grep_args.live_grep_args, { noremap = true })
+vim.keymap.set('n', '<leader>ps', require("telescope").extensions.live_grep_args.live_grep_args, { noremap = true })
 
 -- thic config is doing the same as the one above
 -- vim.keymap.set('n', '<leader>ps', function()

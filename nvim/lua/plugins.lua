@@ -18,6 +18,7 @@ packer.startup(function(use)
         -- or                            , branch = '0.1.x',
         requires = { {'nvim-lua/plenary.nvim'} }
     }
+    use {'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
 
     use 'norcalli/nvim-colorizer.lua'
     use 'nvim-lualine/lualine.nvim' -- Statusline

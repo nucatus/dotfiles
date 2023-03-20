@@ -22,6 +22,7 @@ packer.startup(function(use)
     use {'nvim-telescope/telescope-live-grep-args.nvim'}
 
     use 'norcalli/nvim-colorizer.lua'
+    use 'n-shift/scratch.nvim' -- scratch file with code eval in python, lua, JS, TS
     use 'nvim-lualine/lualine.nvim' -- Statusline
     use {
         'nvim-treesitter/nvim-treesitter',  -- syntax highlighting

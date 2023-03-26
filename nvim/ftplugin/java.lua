@@ -1,5 +1,5 @@
 local java17_home = '/Library/Java/JavaVirtualMachines/temurin-17.jdk/Contents/Home/'
-local jdtls_home = '/usr/local/Cellar/jdtls/1.20.0/libexec'
+local jdtls_home = '/usr/local/Cellar/jdtls/1.21.0/libexec'
 local jdtls_conf = jdtls_home .. '/config_mac'
 local jdtls_plugin = jdtls_home .. '/plugins/org.eclipse.equinox.launcher_1.6.400.v20210924-0641.jar'
 

@@ -24,3 +24,15 @@ or set PATH /usr/local/bin $PATH
 if [ -f $HOME/.config/fish/env/index.fish ]
     source $HOME/.config/fish/env/index.fish
 end
+
+# Source aliases from the ./alias directory
+if [ -f $HOME/.config/fish/alias/index.fish ]
+  source $HOME/.config/fish/alias/index.fish
+end
+
+export KUBECONFIG=$HOME/.kube/config:$HOME/.kube/sepiat-stage/config:$HOME/.kube/sepiat-prod/config:$HOME/.kube/sepiat-int/config:$HOME/.kube/sepiat-infra/config
+export LDFLAGS="-L/usr/local/opt/ruby/lib"
+export CPPFLAGS="-I/usr/local/opt/ruby/include"
+
+set -x JAVA_HOME (/usr/libexec/java_home -v 11.0.12)
+

@@ -3,17 +3,16 @@ window:
 font:
   size: 16
   normal:
-    family: GoMono Nerd Font
+    family: GoMono Nerd Font Mono
+    #family: SauceCodePro Nerd Font Mono
     #family: Fira Code
     #family: Hack Nerd Font Mono
     #family: Andale Mono
 
-    style: Book
-    #style: Regular
-    #family: SauceCodePro Nerd Font Mono
+    style: Regular
     #style: Light
   bold:
-    family: GoMono Nerd Font
+    family: GoMono Nerd Font Mono
     #family: Fira Code
     #family: Andale Mono
     style: Bold

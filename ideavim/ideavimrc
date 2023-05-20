@@ -1,0 +1,55 @@
+""" Set leader to space -------------------------
+let mapleader=" "
+
+""" Plugins -------------------------------------
+set NERDTree
+
+""" Plugins settings ----------------------------
+
+""" Common settings -----------------------------
+set relativenumber
+set number
+set scrolloff=12
+set clipboard+=unnamed
+
+""" Idea specific features ----------------------
+set ideajoin
+set idearefactormode=keep
+
+""" Key maps ------------------------------------
+map <leader>lv :source ~/.config/ideavim/ideavimrc<CR>
+map <leader>ll :edit ~/.config/ideavim/ideavimrc<CR>
+
+""" File navigation
+map <leader>h <Action>(Vcs.ShowTabbedFileHistory)
+map <leader><Space> <Action>(GotoFile)
+map <leader>e <Action>(RecentFiles)
+map <leader>fl <Action>(FileStructurePopup)
+
+""" Code Navigation
+map gd <Action>(GotoDeclaration)
+map gr <Action>(ShowUsages)
+map gi <Action>(GotoImplementation)
+map gs <Action>(GotoSuperMethod)
+
+map <leader>[ <Action>(Back)
+map <leader>] <Action>(Forward)
+nmap ;[ <Action>(GotoPreviousError)
+nmap ;] <Action>(GotoNextError)
+map m[ <Action>(MethodUp)
+map m] <Action>(MethodDown)
+
+""" Coding and refactoring
+vmap crt <Action>(SurroundWith)
+nmap crr <Action>(RenameElement)
+nmap crs <Action>(ChangeSignature)
+nmap ccs <Action>(ShowIntentionActions)
+
+""" IDE navigation
+map <leader>a <Action>(ActivateProjectToolWindow)
+map <leader>ur <Action>(ActivateRunToolWindow)
+map <leader>ud <Action>(ActivateDebugToolWindow)
+map <leader>db <Action>(ToggleLineBreakpoint)
+map <leader>uz <Action>(ToggleDistractionFreeMode)
+
+map <leader>wn <Action>(EditSourceInNewWindow)

@@ -34,5 +34,16 @@ export KUBECONFIG=$HOME/.kube/config:$HOME/.kube/sepiat-stage/config:$HOME/.kube
 export LDFLAGS="-L/usr/local/opt/ruby/lib"
 export CPPFLAGS="-I/usr/local/opt/ruby/include"
 
-set -x JAVA_HOME (/usr/libexec/java_home -v 11.0.12)
+set -x JAVA_HOME (/usr/libexec/java_home -v 25)
 
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/nucatus/opt/google-cloud/google-cloud-sdk/path.fish.inc' ]; . '/Users/nucatus/opt/google-cloud/google-cloud-sdk/path.fish.inc'; end
+
+
+# change the key binding for the fzf file widget
+bind -e \ct                     # unbind the original Ctrl-T
+bind \cf fzf-file-widget        # bind Ctrl-F to the fzf file widget
+
+bind -e \ec
+bind \cl fzf-cd-widget

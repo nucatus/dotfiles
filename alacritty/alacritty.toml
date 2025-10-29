@@ -9,6 +9,7 @@ style = "Bold"
 family = "Inconsolata"
 style = "Light"
 
+# transfer this key binding to the shell as escaped (tmux pane navigation)
 [[keyboard.bindings]]
 chars = "\u001Bh"
 key = "H"

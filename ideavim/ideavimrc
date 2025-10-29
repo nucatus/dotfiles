@@ -3,6 +3,8 @@ let mapleader=" "
 
 """ Plugins -------------------------------------
 set NERDTree
+set surround
+set commentary
 
 """ Plugins settings ----------------------------
 
@@ -23,8 +25,8 @@ map <leader>ll :edit ~/.config/ideavim/ideavimrc<CR>
 """ File navigation
 map <leader>h <Action>(Vcs.ShowTabbedFileHistory)
 map <leader><Space> <Action>(GotoFile)
-map <leader>e <Action>(RecentFiles)
-map <leader>fl <Action>(FileStructurePopup)
+map <leader>c <Action>(GotoClass)
+map <leader>r <Action>(RecentFiles)
 
 """ Code Navigation
 map gd <Action>(GotoDeclaration)
@@ -32,24 +34,37 @@ map gr <Action>(ShowUsages)
 map gi <Action>(GotoImplementation)
 map gs <Action>(GotoSuperMethod)
 
-map <leader>[ <Action>(Back)
-map <leader>] <Action>(Forward)
-nmap ;[ <Action>(GotoPreviousError)
-nmap ;] <Action>(GotoNextError)
-map m[ <Action>(MethodUp)
-map m] <Action>(MethodDown)
+""" File navigation
+map <leader>um <Action>(FileStructurePopup)
+nmap <leader>, <Action>(MethodUp)
+nmap <leader>. <Action>(MethodDown)
+nmap <leader>; <Action>(GotoNextElementUnderCaretUsage)
+nmap <leader>: <Action>(GotoPrevElementUnderCaretUsage)
+
+""" Context navigation
+map <leader>o <Action>(Back)
+map <leader>e <Action>(Forward)
+nmap <leader>a <Action>(GotoPreviousError)
+nmap <leader>u <Action>(GotoNextError)
+nmap <leader>t <Action>(JumpToLastChange)
+nmap <leader>n <Action>(JumpToNextChange)
 
 """ Coding and refactoring
+nmap cas <Action>(ShowIntentionActions)
 vmap crt <Action>(SurroundWith)
 nmap crr <Action>(RenameElement)
 nmap crs <Action>(ChangeSignature)
-nmap ccs <Action>(ShowIntentionActions)
+nmap <leader>cf <Action>(ReformatCode)
+vmap <leader>cf <Action>(ReformatCode)
+nmap coi <Action>(OptimizeImports)
+nmap <A-j> <Action>(EditorCloneCaretBelow)
 
 """ IDE navigation
-map <leader>a <Action>(ActivateProjectToolWindow)
+map <leader>' <Action>(ActivateProjectToolWindow)
+map <leader>p <Action>(SearchEverywhere)
 map <leader>ur <Action>(ActivateRunToolWindow)
 map <leader>ud <Action>(ActivateDebugToolWindow)
-map <leader>db <Action>(ToggleLineBreakpoint)
+map <leader>br <Action>(ToggleLineBreakpoint)
 map <leader>uz <Action>(ToggleDistractionFreeMode)
 
 map <leader>wn <Action>(EditSourceInNewWindow)

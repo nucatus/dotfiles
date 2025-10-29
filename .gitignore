@@ -4,3 +4,5 @@
 /fish/config.fish.backup
 /fish/conf.d
 /fish/fish_plugins
+
+/nvim/lazy-lock.json

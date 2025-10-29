@@ -1,7 +1,18 @@
--- custom lua functions that are not part of a plugin
-require('custom')
-require('base')
-require('style')
-require('keymaps')
-require('clipboard')
-require('plugins')
+
+-- Bootstrap lazy.nvim
+local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
+if not vim.loop.fs_stat(lazypath) then
+  vim.fn.system({
+    "git",
+    "clone",
+    "--filter=blob:none",
+    "https://github.com/folke/lazy.nvim.git",
+    lazypath,
+  })
+end
+vim.opt.rtp:prepend(lazypath)
+
+
+require('user/keybindings')
+require('user/plugins')
+require('user/options')

@@ -47,3 +47,10 @@ bind \cf fzf-file-widget        # bind Ctrl-F to the fzf file widget
 
 bind -e \ec
 bind \cl fzf-cd-widget
+
+# set the defaults for fzf
+set -gx FZF_DEFAULT_OPTS "
+  --layout=reverse --inline-info --height=40% 
+  --preview 'bat --color=always --style=numbers,changes {}' 
+  --bind 'shift-up:preview-page-up,shift-down:preview-page-down'
+"

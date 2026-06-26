@@ -19,8 +19,8 @@ set ideajoin
 set idearefactormode=keep
 
 """ Key maps ------------------------------------
-map <leader>lv :source ~/.config/ideavim/ideavimrc<CR>
-map <leader>ll :edit ~/.config/ideavim/ideavimrc<CR>
+map <leader>rr :edit ~/.config/ideavim/ideavimrc<CR>
+map <leader>rc :source ~/.config/ideavim/ideavimrc<CR>
 
 """ File navigation
 map <leader>h <Action>(Vcs.ShowTabbedFileHistory)

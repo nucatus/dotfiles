@@ -30,12 +30,22 @@ if [ -f $HOME/.config/fish/alias/index.fish ]
   source $HOME/.config/fish/alias/index.fish
 end
 
-export KUBECONFIG=$HOME/.kube/config:$HOME/.kube/sepiat-stage/config:$HOME/.kube/sepiat-prod/config:$HOME/.kube/sepiat-int/config:$HOME/.kube/sepiat-infra/config
+# export KUBECONFIG=$HOME/.kube/config:$HOME/.kube/sepiat-stage/config:$HOME/.kube/sepiat-prod/config:$HOME/.kube/sepiat-int/config:$HOME/.kube/sepiat-infra/config
+export KUBECONFIG=$HOME/.kube/yesync/config-fr:$HOME/.kube/yesync/config-uk:$HOME/.kube/yesync/config-stage
 export LDFLAGS="-L/usr/local/opt/ruby/lib"
 export CPPFLAGS="-I/usr/local/opt/ruby/include"
 
 set -x JAVA_HOME (/usr/libexec/java_home -v 25)
 
+# the initialization of the starship prompt customization
+if command -q starship
+  starship init fish | source
+end
+
+# fish abberviations
+abbr -a k kubectl
+abbr -a kns kubens
+abbr -a kctx kubectx
 
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/Users/nucatus/opt/google-cloud/google-cloud-sdk/path.fish.inc' ]; . '/Users/nucatus/opt/google-cloud/google-cloud-sdk/path.fish.inc'; end
@@ -54,3 +64,6 @@ set -gx FZF_DEFAULT_OPTS "
   --preview 'bat --color=always --style=numbers,changes {}' 
   --bind 'shift-up:preview-page-up,shift-down:preview-page-down'
 "
+
+
+
